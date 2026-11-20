@@ -1,0 +1,72 @@
+# =============================================================================
+# Embedded Linux Portfolio - Project 02 (.gitignore)
+# Excludes upstream trees, out-of-tree builds, AVR/ARM binaries & disk images
+# =============================================================================
+
+# 1. Automated upstream source & staging directories
+sources/
+Bootloader/
+kernel/
+rootfs/
+images/
+**/build/
+
+# 2. AVR & ARM compilation artifacts
+*.o
+*.a
+*.so
+*.ko
+*.out
+*.elf
+*.hex
+*.eep
+*.lss
+*.bin
+*.map
+*.d
+firmware_avr/sensor_node.elf
+firmware_avr/sensor_node.hex
+
+# 3. U-Boot, Linux Kernel & BusyBox outputs
+u-boot*
+zImage
+Image
+vmlinux*
+System.map
+Module.symvers
+modules.order
+*.dtb
+*.dtbo
+*.cpio
+*.cpio.gz
+uInitramfs
+boot.scr
+boot.cmd
+uboot.env
+
+# 4. Raw disk images & runtime sockets
+*.img
+*.img.gz
+*.img.xz
+*.sock
+part.img
+sdcard.img
+
+# 5. LaTeX auxiliary build files (keeps docs/*.tex and docs/*.pdf tracked)
+docs/*.aux
+docs/*.log
+docs/*.out
+docs/*.toc
+docs/*.fls
+docs/*.fdb_latexmk
+
+# 6. Editor & OS metadata
+.vscode/
+.idea/
+.clangd/
+compile_commands.json
+*.swp
+*.swo
+*~
+.DS_Store
+.clangd
